@@ -53,7 +53,7 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url('images/pp2.png');
+    background: url('./images/pp.PNG');
     background-size: cover;
     background-position: center;
     display: flex;
