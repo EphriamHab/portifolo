@@ -50,7 +50,7 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url('pp.png');
+    background: url('images/pp.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -255,6 +255,7 @@ section{
     height: 500px;
     padding: 75px 90px;
     margin-left: 120px;
+    margin-top: 30px;
 }
 .heading1{
     text-align: center;
@@ -373,6 +374,141 @@ section{
     animation: showText 0.5s 1.5s linear forwards;
     opacity: 0;
 }
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+.path{
+   stroke-width: 10; 
+   stroke: #0ef;
+   fill: transparent;
+   stroke-dasharray: 502;
+   stroke-dashoffset: 502;
+   stroke-linecap: round;
+}
+.path-1{
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-2{
+    animation: animate-path2 1s 1s linear forwards;
+}
+.path-3{
+    animation: animate-path3 1s 1s linear forwards;
+}
+.path-4{
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.main-text{
+    padding: 130px;
+    margin-top: 200px;
+}
+.main-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+.main-text h2 span{
+    color: #0ef;
+}
+.portfolio-content{
+   display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(359, auto));
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .container1 {
+        width: calc(50% - 60px); /* Adjust the width as needed */
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: calc((2 * 3.14 * 80) - ((2 * 3.14 * 80) * 0.7));
+    }
+}
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: calc((2 * 3.14 * 80) - ((2 * 3.14 * 80) * 0.75));
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: calc((2 * 3.14 * 80) - ((2 * 3.14 * 80) * 0.8));
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: calc((2 * 3.14 * 80) - ((2 * 3.14 * 80) * 0.8));
+    }
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+
 @keyframes showText{
     100%{
         opacity: 1;
